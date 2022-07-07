@@ -1,0 +1,49 @@
+{
+  "index_settings": {
+    "docstore_compression": "lz4"
+  },
+  "segments": [
+    {
+      "segment_id": "df0b7b28-9192-4d0f-ba14-68f6f3912b42",
+      "max_doc": 1000000,
+      "deletes": null
+    }
+  ],
+  "schema": [
+    {
+      "name": "station_id",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "basic",
+          "fieldnorms": true,
+          "tokenizer": "raw"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "freq",
+          "fieldnorms": true,
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "temperature_c",
+      "type": "f64",
+      "options": {
+        "indexed": true,
+        "fieldnorms": false,
+        "fast": "single",
+        "stored": true
+      }
+    }
+  ],
+  "opstamp": 2000006
+}
